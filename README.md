@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/3af79d9c-cead-4dac-8e89-d34d05712593
 
 # How to Install
 1. Make sure Google Translate is installed on your device. If you'd like to do translations offline, also download your languages for offline usage from inside the Google Translate app.
-2. Download this repository
+2. Download this repository as a ZIP file (`code > download ZIP`)
 3. unzip contents in `koreader > plugins`
 4. Make sure the code is inside a folder with a title that ends with `.koplugin`
 5. Start KOreader and make sure "offline google translate" is enabled in the plugin list.
