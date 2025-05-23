@@ -1,7 +1,7 @@
 local _ = require("gettext")
 return {
-    name = "askeinkbro",
-    fullname = _("AskEinkBro"),
-    description = _([[Allows the user to search text selection in EinkBro.]]),
+    name = "googletranslate",
+    fullname = _("Offline Google Translate"),
+    description = _([[Allows the user to send text selection to the Google Translate app for offline translations.]]),
     version = 0.4.2,
 }
