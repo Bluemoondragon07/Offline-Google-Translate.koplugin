@@ -4,11 +4,10 @@ Translate any sentence offline with Google Translate, instantly from within KOre
 # How to Use
 1. select text or a word and tap the "Google Translate" button
 
-<p align="center">
-  <video src="https://github.com/Bluemoondragon07/Offline-Google-Translate.koplugin/screen-20250523-150907.mp4~2.mp4" width="500px"></video>
-</p>
 
-<video src="screen-20250523-150907.mp4~2.mp4" width="320" height="240" controls></video>
+https://github.com/user-attachments/assets/3af79d9c-cead-4dac-8e89-d34d05712593
+
+
 
 
 # How to Install
