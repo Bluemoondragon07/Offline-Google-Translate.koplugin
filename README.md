@@ -4,7 +4,7 @@ Translate any sentence offline with Google Translate, instantly from within KOre
 # How to Use
 1. select text or a word and tap the "Google Translate" button
 
-![video](https://github.com/Bluemoondragon07/Offline-Google-Translate.koplugin/blob/main/screen-20250523-150907.mp4~2.mp4)
+https://github.com/Bluemoondragon07/Offline-Google-Translate.koplugin/blob/main/screen-20250523-150907.mp4~2.mp4
 
 # How to Install
 1. Make sure Google Translate is installed on your device. If you'd like to do translations offline, also download your languages for offline usage from inside the Google Translate app.
