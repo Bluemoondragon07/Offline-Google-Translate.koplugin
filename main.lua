@@ -4,8 +4,8 @@ local InputContainer = require("ui/widget/container/inputcontainer")
 local DictQuickLookup = require("ui/widget/dictquicklookup")
 local _ = require("gettext")
 
-local AskEinkBro = InputContainer:new {
-  name = "askeinkbro",
+local googleTranslate = InputContainer:new {
+  name = "offline google translate",
   is_doc_only = true,
 }
 
@@ -44,10 +44,10 @@ local doExternalDictLookup = function (self, text, method, callback)
   end
 end
 
-function AskEinkBro:init()
-  self.ui.highlight:addToHighlightDialog("askeinkbro_basic", function(this)
+function googleTranslate:init()
+  self.ui.highlight:addToHighlightDialog("googletranslate_basic", function(this)
     return {
-      text = _("Translate"),
+      text = _("Google Translate"),
       enabled = yes,
       callback = function()
         android.dictLookup(this.selected_text.text, "com.google.android.apps.translate", "text")
@@ -60,11 +60,11 @@ function AskEinkBro:init()
   Device.doExternalDictLookup = doExternalDictLookup
 end
 
-function AskEinkBro:onDictButtonsReady(dict_popup, buttons)
+function googleTranslate:onDictButtonsReady(dict_popup, buttons)
   table.insert(buttons, {
       {
           id = "translate",
-          text = "Translate",
+          text = "Google Translate",
           enabled = true,
           callback = function()
               android.dictLookup(dict_popup.word, "com.google.android.apps.translate", "text")
@@ -74,4 +74,4 @@ function AskEinkBro:onDictButtonsReady(dict_popup, buttons)
   })
 end
 
-return AskEinkBro
+return googleTranslate
