@@ -5,7 +5,7 @@ local DictQuickLookup = require("ui/widget/dictquicklookup")
 local _ = require("gettext")
 
 local googleTranslate = InputContainer:new {
-  name = "offline google translate",
+  name = "Offline Translate (Google Translate must be Installed)",
   is_doc_only = true,
 }
 
