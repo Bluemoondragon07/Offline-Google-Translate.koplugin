@@ -21,5 +21,7 @@ https://github.com/user-attachments/assets/3af79d9c-cead-4dac-8e89-d34d05712593
 ## Contributions
 This plugin is forked from [AskEinkBro](https://github.com/einkbro/askeinkbro), which is referenced from [AskGPT](https://github.com/drewbaumann/AskGPT).
 
+Changes from source (AskEinkBro) are as follows:
+- changed variable and function names and values in _meta.lua and main.lua to send selected text to Google Translate instead of EinkBro
 
 License: GPLv3
