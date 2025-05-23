@@ -47,7 +47,7 @@ end
 function AskEinkBro:init()
   self.ui.highlight:addToHighlightDialog("askeinkbro_basic", function(this)
     return {
-      text = _("EinkBro Word"),
+      text = _("Translate"),
       enabled = yes,
       callback = function()
         android.dictLookup(this.selected_text.text, "com.google.android.apps.translate", "text")
@@ -55,20 +55,7 @@ function AskEinkBro:init()
       end,
     }
   end)
-  if not self.document.is_pdf then
-    self.ui.highlight:addToHighlightDialog("askeinkbro_context", function(this)
-      local prev_context, next_context = self.ui.highlight:getSelectedWordContext(10)
-      local content = prev_context .. "<<" .. this.selected_text.text .. ">>" .. next_context
-      return {
-        text = _("EinkBro Context"),
-        enabled = yes,
-        callback = function()
-          android.dictLookup(content, "com.google.android.apps.translate", "text")
-          this:onClose()
-        end,
-      }
-    end)
-  end
+  
   Device.getExternalDictLookupList = getExternalDictLookupList
   Device.doExternalDictLookup = doExternalDictLookup
 end
