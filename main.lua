@@ -25,7 +25,7 @@ local external = require("device/thirdparty"):new{
       { "LookUpPro", "Look Up Pro", false, "gaurav.lookuppro", "send" },
       { "Mdict", "Mdict", false, "cn.mdict", "send" },
       { "QuickDic", "QuickDic", false, "de.reimardoeffinger.quickdic", "quickdic" },
-      { "EinkBro", "EinkBro", false, "info.plateaukao.einkbro", "text" },
+      { "Translate", "Translate", false, "com.google.android.apps.translate", "text" },
   },
   check = function(self, app)
       return android.isPackageEnabled(app)
@@ -50,7 +50,7 @@ function AskEinkBro:init()
       text = _("EinkBro Word"),
       enabled = yes,
       callback = function()
-        android.dictLookup(this.selected_text.text, "info.plateaukao.einkbro", "text")
+        android.dictLookup(this.selected_text.text, "com.google.android.apps.translate", "text")
         this:onClose()
       end,
     }
@@ -63,7 +63,7 @@ function AskEinkBro:init()
         text = _("EinkBro Context"),
         enabled = yes,
         callback = function()
-          android.dictLookup(content, "info.plateaukao.einkbro", "text")
+          android.dictLookup(content, "com.google.android.apps.translate", "text")
           this:onClose()
         end,
       }
@@ -76,11 +76,11 @@ end
 function AskEinkBro:onDictButtonsReady(dict_popup, buttons)
   table.insert(buttons, {
       {
-          id = "einkbro",
-          text = "Query EinkBro",
+          id = "translate",
+          text = "Translate",
           enabled = true,
           callback = function()
-              android.dictLookup(dict_popup.word, "info.plateaukao.einkbro", "text")
+              android.dictLookup(dict_popup.word, "com.google.android.apps.translate", "text")
               dict_popup:onClose()
           end,
       }
